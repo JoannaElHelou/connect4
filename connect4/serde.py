@@ -2,7 +2,7 @@ from .game import Cell, Grid
 
 
 def serialize_cell(cell: Cell) -> str:
-     """Render a cell as an ASCII character."""
+    """Render a cell as an ASCII character."""
     ...
 
 

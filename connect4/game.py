@@ -5,14 +5,16 @@ from numpy import true_divide
 
 
 class Cell(Enum):
-    """Enumeration representing a connect4 Cell."""
+    """Enumeration representing a Connect4 Cell."""
+
     EMPTY = "."
     A = "X"
     B = "O"
 
 
 class Grid:
-    """Grid of 42 cells."""
+    """Grid of 42 Cells."""
+
     lines = 6
     columns = 7
 
@@ -33,7 +35,7 @@ class Grid:
         return ret
 
     def place(self, column: int, cell: Cell) -> int:
-        """ut one Cell into one of the 7 columns of this grid. Return the line where
+        """Put one Cell into one of the 7 columns of this grid. Return the line where
         the token stops."""
         for line in range(self.lines):
             if self.grid[line][column] == Cell.EMPTY:

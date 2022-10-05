@@ -31,7 +31,8 @@ class Server(Player):
 
 
 class ConsoleServer(Server, ConsolePlayer):
-     """ConsolePlayer, but on accross the network, thanks to Server."""
+    """ConsolePlayer, but on accross the network, thanks to Server."""
+
     pass
 
 
