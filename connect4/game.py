@@ -1,4 +1,5 @@
 from enum import Enum
+from importlib.abc import FileLoader
 from matplotlib import lines
 
 from numpy import true_divide
@@ -93,6 +94,16 @@ class Grid:
 
     def tie(self) -> bool:
         """Check if the grid is full."""
+        empty=0
+        for line in range(6):
+            for column in range(7):
+                if self.grid[line][column] == Cell.EMPTY:
+                    empty += 1
+        if empty == 0 :
+            return True
+        else: 
+            return False
+
         # TODO
         # TODO
         return False
