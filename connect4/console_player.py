@@ -1,4 +1,4 @@
-from .game import Grid, Player
+from .game import Grid, Player, Cell
 
 
 class ConsolePlayer(Player):
@@ -6,4 +6,10 @@ class ConsolePlayer(Player):
     keyboard."""
 
     def play(self, grid: Grid) -> int:
-        ...
+        print (grid)
+        x = int(input ('enter the column number'))
+        #line = grid.place (x,Cell.A)
+        return x
+
+
+
