@@ -44,6 +44,7 @@ class TestGame(unittest.TestCase):
         for line in range(4):
             grid.grid[line][0] = Cell.A
             grid.grid[line][1] = Cell.B if line == 0 else Cell.A
+        print (grid)
         self.assertTrue(grid.win(0, 0))
         self.assertFalse(grid.win(0, 1))
 

@@ -56,33 +56,40 @@ class Grid:
                     return True
             else:
                 adjacent = 0
+    #        if cell == self.grid[line][6] and adjacent!= 4:
+    #            return False
+
         # VERTICAL
         vertical=0
-        for cell in self.grid[column]:
-            if cell == color:
+        for li in range(4):
+            if self.grid[li][column] == color:
                 vertical +=1
                 if vertical == 4:
                     return True
             else:
                 vertical = 0
+    #            if (self.lines - li) < 4 :
+    #                return False        
+
+
         # DIAGONAL
-        diagonal = 0
-        diff: int = column - line
-        for line in range(Grid.lines):
-            if self.grid[line][line+diff]==color:
-                diagonal +=1
-                if diagonal ==4:
-                    return True
-                else:
-                    diagonal =0
+        #diagonal = 0
+        #diff: int = column - line
+        #for line in range(Grid.lines):
+        #    if self.grid[line][line+diff]==color:
+        #        diagonal +=1
+        #        if diagonal ==4:
+        #            return True
+        #        else:
+        #            diagonal =0
                     
+        return False       
 
 
             
 
-        # TODO: Vertical
-        # TODO: Diagonal
-        return False
+        #TODO: Vertical
+        #TODO: Diagonal
 
     def tie(self) -> bool:
         """Check if the grid is full."""
@@ -108,7 +115,7 @@ class Game:
         self.grid = Grid()
 
     def main(self):
-         """Let players play until one of the win or the grid is full."""
+        """Let players play until one of the win or the grid is full."""
         while True:
             if self.play(self.player_a, Cell.A):
                 print(self.grid)
