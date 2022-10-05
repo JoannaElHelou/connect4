@@ -10,6 +10,7 @@ PORT = 50011
 
 
 class Server(Player):
+     """Allow Players to connect to ClientPlayer to join a game over the network."""
     def __init__(self):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             try:
@@ -30,6 +31,7 @@ class Server(Player):
 
 
 class ConsoleServer(Server, ConsolePlayer):
+     """ConsolePlayer, but on accross the network, thanks to Server."""
     pass
 
 
