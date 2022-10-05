@@ -76,7 +76,7 @@ class Grid:
         # DIAGONAL
         #diagonal = 0
         #diff: int = column - line
-        #for line in range(Grid.lines):
+        #for line in range(6):
         #    if self.grid[line][line+diff]==color:
         #        diagonal +=1
         #        if diagonal ==4:
